@@ -1,0 +1,28 @@
+html, body{
+    height:100vh;
+    overflow: auto;
+}
+
+.testimonial-grid {
+    display: grid;
+    gap:1.5rem;
+}
+
+@media (min-width: 600px) {
+    /*utility class*/
+    .grid-col-span-2{
+        grid-column: span 2;
+    }
+
+    .testimonial-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .testimonial:last-child{
+        grid-column-start: 4;
+        /*grid-row-start: 1;
+        grid-row-end: span 2; 3 also works*/
+        /*Short hand*/
+        grid-row: 1 / span 2;
+    }
+}
